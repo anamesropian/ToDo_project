@@ -87,7 +87,6 @@
 <body>
 
 <div class="container">
-    <!-- Սյուն 1: Ստեղծել նոր առաջադրանք -->
     <div class="board-column">
         <h3>➕ Ավելացնել</h3>
         <form action="/add" method="post">
@@ -97,7 +96,6 @@
         </form>
     </div>
 
-    <!-- Սյուն 2: Ընթացիկ առաջադրանքներ -->
     <div class="board-column">
         <h3>⏳ Ընթացիկ (To Do)</h3>
         <div th:each="task : ${tasks}" th:if="${!task.completed}" class="task-card">
@@ -112,7 +110,6 @@
         </div>
     </div>
 
-    <!-- Սյուն 3: Ավարտված առաջադրանքներ -->
     <div class="board-column completed-column">
         <h3>✅ Ավարտված (Done)</h3>
         <div th:each="task : ${tasks}" th:if="${task.completed}" class="task-card">
